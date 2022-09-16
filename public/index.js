@@ -57,7 +57,6 @@ const draw = () => {
 	const width = context.canvas.width
 	const height = context.canvas.height
 
-
 	context.clearRect(0, 0, width, height)
 
 	// Draw x axis
@@ -69,7 +68,6 @@ const draw = () => {
 	context.stroke()
 	context.save()
 
-	// Draw wave
 	let x = 0
 	let y = 0
 	// Amplitude
@@ -77,6 +75,7 @@ const draw = () => {
 	// Frequency
 	const waveWidth = 30
 
+	// Draw wave
 	context.beginPath()
 	context.strokeStyle = '#42f5f2'
 	context.lineWidth = 3
