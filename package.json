@@ -1,15 +1,22 @@
 {
-  "name": "sine_wave",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "prettier": "^2.7.1"
-  }
+	"name": "sine_wave",
+	"version": "1.0.0",
+	"description": "Program that draws an animated sine wave using JavaScript",
+	"main": "public/index.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"keywords": [],
+	"author": "Hector A. Sanchez",
+	"license": "ISC",
+	"devDependencies": {
+		"prettier": "^2.7.1"
+	},
+	"engines": {
+		"node": "17.9.1"
+	},
+	"dependencies": {
+		"body-parser": "^1.20.0",
+		"express": "^4.18.1"
+	}
 }
