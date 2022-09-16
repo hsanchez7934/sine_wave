@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
-app.use(express.static('public'))
-
 const requireHTTPS = (request, response, next) => {
 	if (request.header('x-forwarded-proto') != 'https') {
 		return response.redirect(
