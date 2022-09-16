@@ -4,7 +4,7 @@ let stopAnimation = false
 let direction = 'forward'
 let speed = 1
 
-const bindEventHandlers = () => {
+const init = () => {
 	const btnStart = document.getElementById('btn_start')
 	const btnReverse = document.getElementById('btn_reverse')
 	const btnMinus = document.getElementById('btn_minus')
@@ -100,4 +100,4 @@ const draw = () => {
 	window.requestAnimationFrame(draw)
 }
 
-bindEventHandlers()
+init()
