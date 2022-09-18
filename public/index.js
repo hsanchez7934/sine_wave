@@ -1,5 +1,4 @@
 let xOffset = 0
-let drawStartPoint = 75
 let stopAnimation = false
 let direction = 'forward'
 let speed = 1
@@ -79,7 +78,7 @@ const draw = () => {
 	context.beginPath()
 	context.strokeStyle = '#42f5f2'
 	context.lineWidth = 3
-	context.moveTo(x, drawStartPoint)
+	context.moveTo(x, height / 2)
 
 	while (x < width) {
 		if (direction === 'forward') {
