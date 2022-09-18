@@ -3,50 +3,6 @@ let stopAnimation = false
 let direction = 'forward'
 let speed = 1
 
-const init = () => {
-	const btnStart = document.getElementById('btn_start')
-	const btnReverse = document.getElementById('btn_reverse')
-	const btnMinus = document.getElementById('btn_minus')
-	const btnPlus = document.getElementById('btn_plus')
-
-	btnReverse.disabled = true
-	btnMinus.disabled = true
-	btnPlus.disabled = true
-
-	btnStart.addEventListener('click', (event) => {
-		if (event.target.innerHTML === 'Start') {
-			event.target.innerHTML = 'Stop'
-			stopAnimation = false
-			btnReverse.disabled = false
-			btnMinus.disabled = false
-			btnPlus.disabled = false
-			window.requestAnimationFrame(draw)
-		} else {
-			event.target.innerHTML = 'Start'
-			stopAnimation = true
-			btnReverse.disabled = true
-			btnMinus.disabled = true
-			btnPlus.disabled = true
-		}
-	})
-
-	btnReverse.addEventListener('click', () => {
-		direction = direction === 'forward' ? 'backward' : 'forward'
-	})
-
-	btnMinus.addEventListener('click', () => {
-		if (speed > 1) {
-			speed--
-		}
-	})
-
-	btnPlus.addEventListener('click', () => {
-		if (speed < 10) {
-			speed++
-		}
-	})
-}
-
 const draw = () => {
 	if (stopAnimation) {
 		return
@@ -96,6 +52,50 @@ const draw = () => {
 	context.save()
 	context.restore()
 	window.requestAnimationFrame(draw)
+}
+
+const init = () => {
+	const btnStart = document.getElementById('btn_start')
+	const btnReverse = document.getElementById('btn_reverse')
+	const btnMinus = document.getElementById('btn_minus')
+	const btnPlus = document.getElementById('btn_plus')
+
+	btnReverse.disabled = true
+	btnMinus.disabled = true
+	btnPlus.disabled = true
+
+	btnStart.addEventListener('click', (event) => {
+		if (event.target.innerHTML === 'Start') {
+			event.target.innerHTML = 'Stop'
+			stopAnimation = false
+			btnReverse.disabled = false
+			btnMinus.disabled = false
+			btnPlus.disabled = false
+			window.requestAnimationFrame(draw)
+		} else {
+			event.target.innerHTML = 'Start'
+			stopAnimation = true
+			btnReverse.disabled = true
+			btnMinus.disabled = true
+			btnPlus.disabled = true
+		}
+	})
+
+	btnReverse.addEventListener('click', () => {
+		direction = direction === 'forward' ? 'backward' : 'forward'
+	})
+
+	btnMinus.addEventListener('click', () => {
+		if (speed > 1) {
+			speed--
+		}
+	})
+
+	btnPlus.addEventListener('click', () => {
+		if (speed < 10) {
+			speed++
+		}
+	})
 }
 
 init()
