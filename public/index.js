@@ -14,7 +14,7 @@ const draw = () => {
 
 	context.clearRect(0, 0, width, height)
 
-	// Draw x axis
+	// Draw horizontal axis
 	context.beginPath()
 	context.strokeStyle = '#42f5f2'
 	context.lineWidth = 1
